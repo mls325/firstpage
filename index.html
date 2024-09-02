@@ -78,6 +78,27 @@
              background-color: #ddd;
             color: black;
         }
+
+        /*Dropdown Formatting*/
+        .dropdown {
+            position: relative;
+            text-align: center;
+        }
+
+        .dropdown-content {
+             display: none; /*This hides the text initially*/
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            padding: 12px 16px;
+            z-index: 1;
+        }
+
+        .dropdown:hover .dropdown-content { /*This allows the hover feature to work*/
+            display: block;
+        }
+
         /*Footer Formatting*/
         .footer {
             background-color: #d6d5d2;
@@ -95,12 +116,10 @@
 <body>
 
     <!--for the header of the page-->
-
-    
     <div class="header">
         <h1>marcus.slb</h1>
     </div>
-
+    <!--for the navigation bar-->
     <div class="topnav">
         <a href="https://marcus-slb.pixieset.com/" target="_blank">gallery</a>
         <a href="#">this does nothing</a>
@@ -113,9 +132,12 @@
         </iframe>
         <p>this stays muted</p>
     </section>
-
-    <section class="light">
+    <!--for the second section-->
+    <section class="dropdown">
         <h1>sgro says hi</h1>
+        <div class="dropdown-content">
+            <p>hi kevin</p>
+        </div>
     </section>
 
     <!--footer-->
